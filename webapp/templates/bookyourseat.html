@@ -1,0 +1,85 @@
+{% extends 'HeaderFooter.html'%}
+<html lang="en">
+{% block content%}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+        min-height: 100vh; /* Prevent footer from overlapping */
+        display: flex;
+        flex-direction: column;
+    }
+    .container {
+        flex: 1; /* Keeps footer at the bottom */
+    }
+    .card {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 12px;
+        border: none;
+    }
+    .form-label {
+        font-size: 16px;
+    }
+    .form-control {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    select.form-control {
+        appearance: none; /* Fix dropdown styling */
+        cursor: pointer;
+    }
+    </style>
+
+</head>
+<body>
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-lg p-4 bg-white rounded" style="max-width: 500px; width: 100%;">
+        <h2 class="text-center mb-4">Book Your Bus Ticket</h2>
+
+        <form action="/book_ticket" method="POST">
+            {% csrf_token %}
+
+            <!-- Select Bus -->
+            <div class="mb-3">
+                 <label for="travel_date" class="form-label fw-bold">Enter Bus Number</label>
+                <input type="text" class="form-control border-primary" id="busnumber" name="busnumber" required>
+            </div>
+
+            <!-- Travel Date -->
+            <div class="mb-3">
+                <label for="travel_date" class="form-label fw-bold">Travel Date</label>
+                <input type="date" class="form-control border-primary" id="travel_date" name="travel_date" required>
+            </div>
+
+            <!-- Number of Seats -->
+            <div class="mb-3">
+                <label for="num_seats" class="form-label fw-bold">Number of Seats</label>
+                <input type="number" class="form-control border-primary" id="num_seats" name="num_seats" min="1" max="10" value="1" required>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid">
+                <button onclick="booknow" type="submit" class="btn btn-primary btn-lg">Book Ticket</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+</body>
+<script>
+    function booknow()
+    {
+    window.location = "paynow.html";
+    }
+</script>
+</html>

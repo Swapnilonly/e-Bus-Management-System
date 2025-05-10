@@ -1,0 +1,43 @@
+{% extends 'adminheaderfooter.html'%}
+<html lang="en">
+{% block content %}
+  <!-- Main Content -->
+  <main class="main">
+ <!-- Form Section -->
+ <section class="container-fluid form-section">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="form-container shadow">
+          <h5 class="text-center">Add Bus Types</h5>
+          <form action="/Post_Bus_type" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+              <h4 align="center">{{msg}}</h4>
+              <div class="mb-3">
+                <label for="busType" class="form-label">Bus Type</label>
+                <select class="form-control" id="busType" name="busType" required>
+                  <option value="" disabled selected>Select Bus Type</option>
+                  <option value="AC" name = "AC">AC</option>
+                  <option value="Non-AC" name="NonAC">Non-AC</option>
+                  <option value="Electric" name="electric">Electric</option>
+                </select>
+              </div>              </div>
+            <div class="mb-3">
+              <label for="busCapacity" class="form-label">Seating Capacity</label>
+              <input type="number" class="form-control" id="busCapacity" name="busCapacity" placeholder="Enter seating capacity" required>
+            </div>
+            <div class="mb-3">
+              <label for="busDescription" class="form-label">Description</label>
+              <textarea class="form-control" id="busDescription" name="busDescription" rows="4" placeholder="Add a brief description of the bus type"></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+{% endblock %}
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   {% load static %}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - ebus management system</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+<!--  <link href="static/img/favicon.png" rel="icon">-->
+<!--  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+               <!--  New-->
+    <link href="{% static 'img/favicon.png' %}" rel="icon">
+    <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+<!--  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+<!--  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">-->
+<!--  <link href="static/vendor/aos/aos.css" rel="stylesheet">-->
+<!--  <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">-->
+<!--  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">-->
+<!--  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">-->
+                           <!--  New-->
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+<!--  <link href="static/css/main.css" rel="stylesheet">-->
+<!--  <link rel="stylesheet" href="static/css/about.css">-->
+<!--  <link rel="stylesheet" href="static/css/services.css">-->
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+  <link rel="stylesheet" href="{% static 'css/services.css' %}">
+
+
+  <!-- =======================================================
+  * Template Name: Logis
+  * Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="about-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="static/img/logo2.png" class="logo1" alt="">
+        <h1 class="sitename">e-Bus Management System</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/" class="/">Home<br></a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+
+<!--          <li><a href="services">Services</a></li>-->
+<!--          <li><a href="contact">Contact</a></li>-->
+<!--          <li><a href="contact">Contact</a></li>-->
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </ul></nav>
+
+      <a class="btn-getstarted "style="font-weight: bold;" href="{% url 'Login' %}">Login</a>
+      <!-- <i class="fa-solid fa-moon"></i> -->
+       <ul><li> <a href=" #"><button id="theme-toggle" class="btn btn-secondary mt-3">Toggle Dark Mode</button></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(static/img/aboutbanner.jpg);">
+      <div class="container position-relative">
+        <h1>About</h1>
+        <p>The e-Bus Management System optimizes public transportation by providing real-time tracking, efficient route management, and enhanced operational insights for a seamless passenger experience.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li class="/about">About</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'img/video.jpg' %}" class="img-fluid" alt="">
+            <a href="https://youtu.be/7wnove7K-ZQ?si=42kup6M-QiLLEa80" class="glightbox pulsating-play-btn"></a>
+          </div>
+
+          <div class="col-lg-6 content order-last  order-lg-first" data-aos="fade-up" data-aos-delay="100">
+            <h3>About Us</h3>
+            <p>
+              At Smart e-Bus Management, we are dedicated to transforming public transportation through innovative technology. Our platform is designed to make bus operations smarter, more efficient, and eco-friendly.
+            </p>
+            <ul>
+              <li>
+                <i class="fa-solid fa-bus pt-4"></i>  <div>
+                  <h5>Our Vision</h5>
+                  <p>At Smart e-Bus Management, our vision is to revolutionize urban transit systems through intelligent, data-driven solutions.</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock pt-4"></i>
+                <div>
+                  <h5>What We Do</h5>
+                  <p>We provide an all-in-one platform that simplifies bus operations for cities and transport agencies.</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-lightbulb pt-4"></i>
+                <div>
+                  <h5>Our Commitment to Innovation</h5>
+                  <p>Innovation is at the core of what we do. Our platform is powered by AI, machine learning, and real-time analytics, helping transit systems stay ahead of the curve.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+     <!-- This empty section about page stats is not used in this example. -->
+
+    </section><!-- /Stats Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Our Team<br></span>
+        <h2>Our Team</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container ">
+
+        <div class="row d-flex justify-content-center">
+
+          <div class="col-lg-4 col-md-6 d-flex " data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="{% static 'img/team/img.jpg' %}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Swapnil</h4>
+                <span>Python Full-Stack Developer</span>
+                <p>
+                  A Python Full Stack Developer skilled in creating end-to-end web solutions using front-end technologies like HTML, CSS, JavaScript, and frameworks like React.js. specialized in Python with Django and Flask for building scalable back-end applications and APIs.                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="{% static 'img/team/sand.png' %}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Sandeep Patel</h4>
+                <span>Java Developer</span>
+                <p>
+                  A Java Full Stack Developer with expertise in building comprehensive web applications using front-end technologies like HTML, CSS, JavaScript, and frameworks such as Angular or React.js. On the back end, specialized in Java with Spring Boot and Hibernate for developing scalable APIs and enterprise-level applications  </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <!-- <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="static/img/team/team-3.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>William Anderson</h4>
+                <span>Content</span>
+                <p>
+                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+     <!-- Testimonials Section -->
+     <section id="testimonials" class="testimonials section dark-background">
+
+      <img src="{% static 'img/testimonials-bg.jpg' %}" class="testimonials-bg" alt="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'img/testimonials/img.jpg' %}" class="testimonial-img" alt="image not found">
+                <h3>Swapnil</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>I am impressed with the eBus Management System project, which streamlined our bus operations with real-time tracking, optimized scheduling, and enhanced efficiency.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'img/testimonials/h.jpg' %}" class="testimonial-img" alt="">
+                <h3>Himanshu Maurya</h3>
+                <h4>Designer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The eBus Management System project offers seamless real-time tracking and automated scheduling, making fleet management efficient and reliable. It has significantly improved service quality and operational performance</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'img/testimonials/pr.jpg' %}" class="testimonial-img" alt="">
+                <h3>Priyanshu Maurya </h3>
+                <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The eBus Management System has simplified fleet operations with real-time tracking and automated scheduling. It enhances efficiency, reduces delays, and improves the overall user experience.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'img/testimonials/sa.jpg' %}" class="testimonial-img" alt="">
+                <h3>Santosh Yadav</h3>
+                <h4>Freelancer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The eBus Management System delivers efficient fleet management with real-time tracking and smart scheduling. It has boosted operational accuracy and improved service reliability for both operators and passengers.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'img/testimonials/sw.jpg' %}" class="testimonial-img" alt="">
+                <h3>Swet Dixit</h3>
+                <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The eBus Management System provides real-time tracking and automated scheduling, optimizing fleet efficiency and improving service quality. It's a game-changer for managing daily operations smoothly.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- /Testimonials Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Frequently Asked Questions</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          The FAQs section addresses common queries about the eBus Management System, including key features, technologies, and user benefits. It also covers topics like bus tracking, data security, and ticket management.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>What is the eBus Management System?</h3>
+                <div class="faq-content">
+                  <p>It's a platform that streamlines bus transportation operations, offering features like online ticket booking, bus tracking, and schedule management.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>What technologies are used in this system?</h3>
+                <div class="faq-content">
+                  <p>The system is built using HTML, CSS, JavaScript (React.js/Vue.js),Bootstrap, and integrates APIs for maps and payments.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>How does bus tracking work?</h3>
+                <div class="faq-content">
+                  <p>The system uses GPS data to provide real-time bus location updates on a map, allowing passengers to track buses and estimated arrival times.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Can I cancel or refund my ticket?</h3>
+                <div class="faq-content">
+                  <p>Yes, the system allows passengers to cancel tickets within a specified timeframe and processes refunds according to company policies.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Is my personal data secure?</h3>
+                <div class="faq-content">
+                  <p>Yes, the system ensures data security through encryption, role-based access, and secure payment gateways.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+<!-- /Faq Section -->
+  </main>
+
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">eBus Management System </span>
+          </a>
+          <p> Simplifying public transportation with real-time bus tracking, easy ticket booking, and efficient route management. Stay connected with us for updates and support.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.facebook.com/profile.php?id=100045901268391&mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/swapnil__aryan/profilecard/?igsh=N2ViYWgyaXF4aWxt"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Online Ticket Booking</a></li>
+            <li><a href="#">Real-Time Bus Tracking</a></li>
+            <li><a href="#">Route and Schedule Management</a></li>
+            <li><a href="#">Passenger Notifications and Alerts</a></li>
+            <li><a href="#">Secure Payments and Refunds</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>Jaunpur</p>
+          <p>Uttar Pradesh</p>
+          <p>India</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>6388613403</span></p>
+          <p><strong>Email:</strong> <span>ebusms2472002@gmail.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">eBus Management system</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">Swapnil</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+<!--  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+<!--  <script src="static/vendor/php-email-form/validate.js"></script>-->
+<!--  <script src="static/vendor/aos/aos.js"></script>-->
+<!--  <script src="static/vendor/purecounter/purecounter_vanilla.js"></script>-->
+<!--  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>-->
+<!--  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>-->
+
+                   <!--  New-->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+
+  <!-- Main JS File -->
+<!--  <script src="static/js/main.js"></script>-->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

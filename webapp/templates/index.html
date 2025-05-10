@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - ebus management system</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+<!--  <link href="static/img/favicon.png" rel="icon">-->
+<!--  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+               <!--  New-->
+    <link href="{% static 'img/favicon.png' %}" rel="icon">
+    <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+<!--  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+<!--  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">-->
+<!--  <link href="static/vendor/aos/aos.css" rel="stylesheet">-->
+<!--  <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">-->
+<!--  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">-->
+<!--  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">-->
+                           <!--  New-->
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+<!--  <link href="static/css/main.css" rel="stylesheet">-->
+<!--  <link rel="stylesheet" href="static/css/about.css">-->
+<!--  <link rel="stylesheet" href="static/css/services.css">-->
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+  <link rel="stylesheet" href="{% static 'css/services.css' %}">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="static/img/logo2.png" class="logo1" alt="">
+        <h1 class="sitename">e-Bus Management System</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/" class="/">Home<br></a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+
+<!--          <li><a href="services">Services</a></li>-->
+<!--          <li><a href="contact">Contact</a></li>-->
+<!--          <li><a href="contact">Contact</a></li>-->
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </ul></nav>
+
+      <a class="btn-getstarted "style="font-weight: bold;" href="{% url 'Login' %}">Login</a>
+      <!-- <i class="fa-solid fa-moon"></i> -->
+       <ul><li> <a href=" #"><button id="theme-toggle" class="btn btn-secondary mt-3">Toggle Dark Mode</button></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="{% static 'img/world-dotted-map.png' %}" alt="" class="hero-bg" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row gy-4 d-flex justify-content-between">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h2 data-aos="fade-up">Smart e-bus Management Platform</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Our Smart eBus Management Platform offers an integrated solution for public transport operators, helping to streamline daily bus operations with cutting-edge technology. </p>
+
+            <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
+            </div>
+          </div>
+
+          <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+            <img src="{% static 'img/hero-img.svg'%}" class="img-fluid mb-3 mb-lg-0" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section">
+
+      <div class="container">
+
+        <div class="row gy-4">    
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><a href="https://www.samsara.com/products/telematics/gps-fleet-tracking"><i class="fa-solid fa-location-dot text-success"></i></a></div>
+            <div>
+              <h4 class="title text-success"> Real-Time Fleet Tracking</h4>
+              <p class="description">Stay connected with your entire fleet in real time. With live GPS tracking and location updates, you can monitor bus positions, ensure timely arrivals, and enhance passenger experience</p>
+              <a href="https://www.samsara.com/products/telematics/gps-fleet-tracking" class="readmore stretched-link text-success"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><a href="https://www.routora.com/?gad_source=1&gclid=Cj0KCQjw99e4BhDiARIsAISE7P9f4Q1iFxLUfsyXWPFfx09K531tLWt8U6orjeAFJLyqHTgyLTFJWyYaAmD3EALw_wcB"><i class="fa-solid fa-route text-success"></i></a></div>
+            <div>
+              <h4 class="title text-success">Automated Route Planning</h4>
+              <p class="description">Optimize bus routes with AI-driven algorithms that consider traffic patterns, peak hours, and passenger demand. Reduce delays, fuel consumption, and operational costs by ensuring efficient travel routes.</p>
+              <a href="https://www.routora.com/?gad_source=1&gclid=Cj0KCQjw99e4BhDiARIsAISE7P9f4Q1iFxLUfsyXWPFfx09K531tLWt8U6orjeAFJLyqHTgyLTFJWyYaAmD3EALw_wcB" class="readmore stretched-link text-success"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex " data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0"><a href="https://www.thalesgroup.com/en/markets/digital-identity-and-security/banking-payment/transit/mobile-ticketing"><i class="fa-solid fa-wallet text-success"></i></a></div>
+            <div>
+              <h4 class="title text-success">Digital Ticketing and Payments </h4>
+              <p class="description">Simplify fare collection with a cashless, contactless payment system. Allow passengers to purchase tickets via mobile apps, smart cards, or e-wallets, reducing the need for physical transactions</p>
+              <a href="https://www.thalesgroup.com/en/markets/digital-identity-and-security/banking-payment/transit/mobile-ticketing" class="readmore stretched-link text-success"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+        </div>
+      </div>
+    </section><!-- /Featured Services Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'img/video.jpg' %}" class="img-fluid" alt="">
+            <a href="https://youtu.be/tEaMc_fSDo0?si=1StOAqjCbEIKPaln" class="glightbox pulsating-play-btn"></a>
+          </div>
+
+          <div class="col-lg-6 content order-last  order-lg-first" data-aos="fade-up" data-aos-delay="100">
+            <h3>About Us</h3>
+            <p>
+              At Smart eBus Management, we are dedicated to transforming public transportation through innovative technology. Our platform is designed to make bus operations smarter, more efficient, and eco-friendly.
+            </p>
+            <ul>
+              <li>
+               <a href="https://www.twaice.com/article/e-bus-fleet-management"><i class="fa-solid fa-bus pt-4"></i></a>                <div>
+                  <h5>Our Vision</h5>
+                  <p>At Smart eBus Management, our vision is to revolutionize urban transit systems through intelligent, data-driven solutions.</p>
+                </div>
+              </li>
+              <li>
+                <a href="https://www.dimts.in/bus-operations-management.aspx"><i class="fa-solid fa-clock pt-4"></i></a>
+                <div>
+                  <h5>What We Do</h5>
+                  <p>We provide an all-in-one platform that simplifies bus operations for cities and transport agencies.</p>
+                </div>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/pulse/what-does-mean-committed-innovation-dr-monique-beedles-phd-faicd-cama/"><i class="fa-solid fa-lightbulb pt-4"></i></a>
+                <div>
+                  <h5>Our Commitment to Innovation</h5>
+                  <p>Innovation is at the core of what we do. Our platform is powered by AI, machine learning, and real-time analytics, helping transit systems stay ahead of the curve.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Our Services<br></span>
+        <h2>Our ServiceS</h2>
+        <p>Innovative solutions for efficient public transportation, including fleet monitoring, dynamic scheduling, and digital ticketing.
+        </p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <div class="card-img">
+                <a href="https://www.loginextsolutions.com/blog/real-time-fleet-tracking-transportation-management-system/" class="stretched-link"><img src="{% static 'img/fleet.jpg' %}" alt="" class="img-fluid h-90 w-150"></a>
+              </div>
+              <h3><a href="https://www.loginextsolutions.com/blog/real-time-fleet-tracking-transportation-management-system/" class="stretched-link"> Real-Time Fleet Monitoring</a></h3>
+              <p>
+                Monitor your entire bus fleet in real time with GPS tracking. Stay updated on bus locations, optimize routes instantly, and reduce delays to provide passengers with accurate arrival times.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <div class="card-img">
+                <a href="https://fareye.com/resources/blogs/dynamic-route-optimization-and-planning"><img src="{% static 'img/route.jpg' %}" alt="" class="img-fluid h-90 w-150">
+              </div>
+              <h3><a href="https://fareye.com/resources/blogs/dynamic-route-optimization-and-planning" class="stretched-link"> Dynamic Route and Schedule Planning</a></h3></a>
+              <p>Utilize AI algorithms to optimize bus routes and schedules. Our system adapts to traffic, passenger demand, and road closures. This ensures efficient bus operations at all times.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <div class="card-img">
+                <a href="https://en.wikipedia.org/wiki/Passenger_information_system"><img src="{% static 'img/psg.jpg' %}" alt="" class="img-fluid h-90 w-150">
+              </div>
+              <h3><a href="https://en.wikipedia.org/wiki/Passenger_information_system" class="stretched-link">Passenger Information System</a></h3>
+              <p>Enhance the passenger experience with real-time updates on bus arrivals, routes, and service changes. Passengers can access this information via mobile apps or display boards at bus stops.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card">
+              <div class="card-img">
+                <a href="https://www.thalesgroup.com/en/markets/digital-identity-and-security/banking-payment/transit/mobile-ticketing" class="stretched-link"></a><img src="{% static 'img/pay.jpg' %}" alt="" class="img-fluid h-90 w-150">
+              </div>
+              <a href="https://www.thalesgroup.com/en/markets/digital-identity-and-security/banking-payment/transit/mobile-ticketing" class="stretched-link"><h3> Digital Ticketing and Cashless Payments</a></a></h3>
+              <p>Simplify fare collection with contactless payments through mobile apps, smart cards, or e-wallets. Our system supports cashless transactions, reducing operational overhead and speeding up boarding times.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="card">
+              <div class="card-img">
+                <a href="https://www.trackyourtruck.com/blog/diagnostic-tests-for-your-fleet/"><img src="{% static 'img/tech.jpg' %}" alt="" class="img-fluid h-90 w-150">
+              </div>
+              <h3><a href="https://www.trackyourtruck.com/blog/diagnostic-tests-for-your-fleet/">Fleet Maintenance and Diagnostics</a></h3><p>
+                Keep your buses in top condition with automated maintenance schedules and real-time diagnostics. Our system monitors vehicle health, alerting you to potential issues before they become costly problems.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="card">
+              <div class="card-img">
+                <a href="https://www.investopedia.com/terms/d/data-analytics.asp"><img src="{% static 'img/info.jpg' %}" alt="" class="img-fluid h-90 w-150">
+              </div>
+              <h3><a href="https://www.investopedia.com/terms/d/data-analytics.asp" class="stretched-link"> Data Analytics and Reporting</a></h3></a>
+              <p>
+                Gain valuable insights into your bus operations with comprehensive data analytics. Track performance, passenger demand, and service efficiency, and use this data to make informed decisions that drive operational improvements.</p>
+            </div>
+          </div><!-- End Card Item -->
+        </div>
+      </div>
+    </section>
+    <!-- /Services Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Features</span>
+        <h2>Features</h2>
+        <p>Our eBus Management System is equipped with a range of advanced features designed to streamline public transportation operations and enhance the passenger experience.</p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            <img src="static/img/b1.jpg" class="img-fluid h-60" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+            <h3> Innovative Solutions for Efficient Public Transportation.</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i><span> Monitor bus locations for timely arrivals and quick responses to delays.</span></li>
+              <li><i class="bi bi-check"></i> <span>Use AI to adjust routes based on traffic and passenger demand.</span></li>
+              <li><i class="bi bi-check"></i> <span>Generate optimal bus schedules that adapt to changes in demand.</span></li>
+            </ul>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="static/img/b2.jpg" class="img-fluid h-60" alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+            <h3>Automated Scheduling</h3>
+            <p class="fst-italic">
+              Automated Scheduling generates optimal bus timetables based on real-time data and demand patterns, ensuring reliable service
+            </p>
+            <p>
+              Streamlines the process of creating bus timetables by generating optimal schedules based on real-time data and demand patterns. This feature adapts to changing conditions, ensuring reliable service while minimizing operational costs.
+            </p>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+            <img src="static/img/b3.jpg" class="img-fluid h-60" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up">
+            <h3> Dynamic Route Optimization</h3>
+            <p class="fst-italic"> Leverages AI to analyze real-time traffic and passenger demand, allowing for automatic adjustments to bus routes. This ensures efficient service by minimizing delays and optimizing travel times based on actual usage patterns.</p>
+            <ul>
+              <li><i class="bi bi-check"></i> <span>Automatically adjust bus routes using AI to analyze real-time traffic data and passenger demand.</span></li>
+              <li><i class="bi bi-check"></i><span> Anticipate peak travel times and disruptions for proactive rerouting, minimizing delays.</span></li>
+              <li><i class="bi bi-check"></i> <span>Optimize routes based on actual passenger usage patterns for efficient service.</span>.</li>
+            </ul>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
+            <img src="static/img/b4.jpg" class="img-fluid " alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+            <h3>Digital Ticketing and Payments</h3>
+            <p class="fst-italic">
+              Digital Ticketing and Payments facilitate cashless transactions through mobile apps and smart cards, streamlining fare collection and enhancing passenger convenience.
+            </p>
+            <p>
+              Digital Ticketing and Payments enable passengers to purchase tickets effortlessly via mobile devices, reducing wait times and congestion at bus stops.This feature supports various payment methods, including credit/debit cards and e-wallets, to accommodate diverse passenger preferences.
+            </p>
+          </div>
+        </div><!-- Features Item -->
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section dark-background">
+
+      <img src="static/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="static/img/testimonials/img.jpg" class="testimonial-img" alt="image not found">
+                <h3>Swapnil</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>I am impressed with the eBus Management System project, which streamlined our bus operations with real-time tracking, optimized scheduling, and enhanced efficiency.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="static/img/testimonials/h.jpg" class="testimonial-img" alt="">
+                <h3>Himanshu Maurya</h3>
+                <h4>Designer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The eBus Management System project offers seamless real-time tracking and automated scheduling, making fleet management efficient and reliable. It has significantly improved service quality and operational performance</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="static/img/testimonials/pr.jpg" class="testimonial-img" alt="">
+                <h3>Priyanshu Maurya </h3>
+                <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The eBus Management System has simplified fleet operations with real-time tracking and automated scheduling. It enhances efficiency, reduces delays, and improves the overall user experience.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="static/img/testimonials/sa.jpg" class="testimonial-img" alt="">
+                <h3>Santosh Yadav</h3>
+                <h4>Freelancer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The eBus Management System delivers efficient fleet management with real-time tracking and smart scheduling. It has boosted operational accuracy and improved service reliability for both operators and passengers.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="static/img/testimonials/sw.jpg" class="testimonial-img" alt="">
+                <h3>Swet Dixit</h3>
+                <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The eBus Management System provides real-time tracking and automated scheduling, optimizing fleet efficiency and improving service quality. It's a game-changer for managing daily operations smoothly.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section><!-- /Testimonials Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Frequently Asked Questions</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          The FAQs section addresses common queries about the eBus Management System, including key features, technologies, and user benefits. It also covers topics like bus tracking, data security, and ticket management.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>What is the eBus Management System?</h3>
+                <div class="faq-content">
+                  <p>It's a platform that streamlines bus transportation operations, offering features like online ticket booking, bus tracking, and schedule management.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>What technologies are used in this system?</h3>
+                <div class="faq-content">
+                  <p>The system is built using HTML, CSS, JavaScript (React.js/Vue.js),Bootstrap, and integrates APIs for maps and payments.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>How does bus tracking work?</h3>
+                <div class="faq-content">
+                  <p>The system uses GPS data to provide real-time bus location updates on a map, allowing passengers to track buses and estimated arrival times.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Can I cancel or refund my ticket?</h3>
+                <div class="faq-content">
+                  <p>Yes, the system allows passengers to cancel tickets within a specified timeframe and processes refunds according to company policies.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Is my personal data secure?</h3>
+                <div class="faq-content">
+                  <p>Yes, the system ensures data security through encryption, role-based access, and secure payment gateways.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+  </main>
+<!-- Footer section -->
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">e-Bus Management System </span>
+          </a>
+          <p> Simplifying public transportation with real-time bus tracking, easy ticket booking, and efficient route management. Stay connected with us for updates and support.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.facebook.com/profile.php?id=100045901268391&mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/swapnil__aryan/profilecard/?igsh=N2ViYWgyaXF4aWxt"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Online Ticket Booking</a></li>
+            <li><a href="#">Real-Time Bus Tracking</a></li>
+            <li><a href="#">Route and Schedule Management</a></li>
+            <li><a href="#">Passenger Notifications and Alerts</a></li>
+            <li><a href="#">Secure Payments and Refunds</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>Jaunpur</p>
+          <p>Uttar Pradesh</p>
+          <p>India</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>6388613403</span></p>
+          <p><strong>Email:</strong> <span>ebusms2472002@gmail.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">e-Bus Management system</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">Swapnil</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+<!--  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+<!--  <script src="static/vendor/php-email-form/validate.js"></script>-->
+<!--  <script src="static/vendor/aos/aos.js"></script>-->
+<!--  <script src="static/vendor/purecounter/purecounter_vanilla.js"></script>-->
+<!--  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>-->
+<!--  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>-->
+
+                   <!--  New-->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+
+  <!-- Main JS File -->
+<!--  <script src="static/js/main.js"></script>-->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+{% extends 'adminheaderfooter.html'%}
+<html lang="en">
+{% block content%}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #demo{
+        height:100px;
+        width:100%;
+<!--        background-color:navy;-->
+        }
+         #demo1{
+        min-height:500px;
+        width:100%;
+        background-color:white;
+        }
+    table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background: #ffffff;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #343a40;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #d9edf7;
+        cursor: pointer;
+    }
+
+    td {
+        border: 1px solid #dddddd;
+        font-size: 14px;
+        color: #555555;
+    }
+
+    th:first-child,
+    td:first-child {
+        border-left: none;
+    }
+
+    th:last-child,
+    td:last-child {
+        border-right: none;
+    }
+    </style>
+</head>
+<body>
+<div id="demo"></div>
+<div id="demo1">
+    <table>
+        <tr>
+            <th>Bus Type</th>
+            <th>Bus Capacity </th>
+            <th>Bus Description</th>
+        </tr>
+        {% for bus in obj %}
+        <tr>
+            <td>{{bus.bustype}}</td>
+            <td>{{bus.buscapacity}}</td>
+            <td>{{bus.buscdescription}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}
+</body>
+</html>

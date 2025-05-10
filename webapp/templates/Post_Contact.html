@@ -1,0 +1,42 @@
+{% extends 'adminheaderfooter.html' %}
+<html lang="en">
+{% block content %}
+
+  <!-- Main Content -->
+  <main class="main">
+ <!-- Form Section -->
+ <section class="container-fluid form-section">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="form-container shadow">
+          <h5 class="text-center mb-4">Post Bus Contact</h5>
+          <form action="/Post_Contact" method="POST">
+            {% csrf_token %}
+                <h4>{{msg}}</h4>
+            <div class="mb-3">
+              <label for="contactPerson" class="form-label">Contact Person</label>
+              <input type="text" class="form-control" id="contactPerson" name="contactPerson" placeholder="Enter Contact Person Name" required>
+            </div>
+            <div class="mb-3">
+              <label for="contactEmail" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="contactEmail" name="contactEmail" placeholder="Enter Email Address" required>
+            </div>
+            <div class="mb-3">
+              <label for="contactPhone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="contactPhone" name="contactPhone" placeholder="Enter Phone Number" required>
+            </div>
+            <div class="mb-3">
+              <label for="contactAddress" class="form-label">Address</label>
+              <textarea class="form-control" id="contactAddress" name="contactAddress" rows="4" placeholder="Enter Full Address"></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+{% endblock %}
+</html>

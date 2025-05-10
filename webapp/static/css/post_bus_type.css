@@ -1,0 +1,40 @@
+/* Position the form at the top with some spacing */
+.form-section {
+    margin-top: 150px;
+    padding: 20px;
+  }
+  
+  .form-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container h5 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .form-container .form-label {
+    font-weight: 500;
+  }
+  
+  .form-container .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+  }
+  
+  .form-container .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .form-container .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  

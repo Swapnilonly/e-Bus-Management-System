@@ -1,0 +1,46 @@
+{% extends 'adminheaderfooter.html' %}
+<html lang="en">
+{% block content %}
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Form Section -->
+    <section class="container-fluid form-section">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="form-container shadow">
+            <h5 class="text-center mb-4">Post Bus Information</h5>
+            <form action="/Post_Bus_info" method="POST">
+              {% csrf_token %}
+              <div class="mb-3">
+                <h4 align="center">{{msg}}</h4>
+                <label for="busNumber" class="form-label">Bus Number</label>
+                <input type="text" class="form-control" id="busNumber" name="busNumber" placeholder="Enter Bus Number (e.g., MH12-1234)" required>
+              </div>
+              <div class="mb-3">
+                <label for="routeName" class="form-label">Route Name</label>
+                <input type="text" class="form-control" id="routeName" name="routeName" placeholder="Enter Route Name (e.g., Pune to Mumbai)" required>
+              </div>
+              <div class="mb-3">
+                <label for="departureTime" class="form-label">Departure Time</label>
+                <input type="time" class="form-control" id="departureTime" name="departureTime" placeholder="Departure Time" required>
+              </div>
+              <div class="mb-3">
+                <label for="arrivalTime" class="form-label">Arrival Time</label>
+                <input type="time" class="form-control" id="arrivalTime" name="arrivalTime" placeholder="Arrival Time" required>
+              </div>
+              <div class="mb-3">
+                <label for="busFare" class="form-label">Fare (₹)</label>
+                <input type="number" class="form-control" id="busFare" name="busFare" placeholder="Enter Bus Fare" required>
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}
+</html>
